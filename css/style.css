@@ -1,0 +1,459 @@
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ofont.ru_Proxima\ Nova.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../fonts/ofont.ru_Proxima\ Nova.ttf') format('ttf');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+html,
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Roboto', sans-serif;
+
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 75.81%, #070506 100%),  url(../img/main-bg.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    background-color: #010101;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1,h2,h3,h5,h6,h6 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1020px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    padding-top: 91px;
+    margin-bottom: 78px;
+}
+.header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 40px;
+    height: 50px;
+
+    cursor: pointer;
+    z-index: 200;
+}
+
+
+
+.nav-toggle__btn {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 3px;
+
+    background-color: #C73329;
+    border: none;
+
+    cursor: pointer;
+}
+
+.nav-toggle__btn:focus {
+    outline: none;
+}
+
+.nav-toggle__btn::before,
+.nav-toggle__btn::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 3px;
+    background-color: #C73329;
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+
+.nav-toggle__btn::before {
+    top: -7px;
+}
+.nav-toggle__btn::after {
+    top: 7px;
+}
+.nav-toggle.active .nav-toggle__btn::before {
+    top: 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.nav-toggle.active .nav-toggle__btn::after {
+    top: 0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+.nav-toggle.active .nav-toggle__btn {
+    background-color: transparent;
+
+}
+
+
+.header__logo {
+    margin-right: 71px;
+}
+
+
+
+
+.nav__link {
+    font-size: 16px;
+    transition: color 0.2s linear;
+    -webkit-transition: color 0.2s linear;
+    -moz-transition: color 0.2s linear;
+    -ms-transition: color 0.2s linear;
+    -o-transition: color 0.2s linear;
+}
+.nav__link:not(:last-child) {
+    margin-right: 15px;
+}
+.nav__link:hover {
+    color: #C73329;
+}
+
+/* Intro */
+
+.intro__content-title {
+    font-family: 'ProximaNova-Black', sans-serif;
+}
+.intro__content-episode {
+    font-size: 40px;
+    line-height: 40px;
+
+    margin-bottom: 5px;
+}
+.intro__content-movie-title {
+    font-size: 64px;
+    line-height: 78px;
+
+    margin-bottom: 25px;
+}
+
+.intro__content-text {
+    width: 54%;
+    color: #AFAFAF;
+
+    margin-bottom: 25px;
+}
+
+.intro__info {
+    margin-bottom: 46px;
+}
+.intro__info-premiere {
+    color: #B02000;
+}
+.intro__info-date {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.intro__btn {
+    position: relative;
+    margin-bottom: 67px;
+}
+
+.intro__btn-play {
+    display: inline-block;
+
+    padding: 25px 87px 24px 34px;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #fff;
+    background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
+
+    border: none;
+    border-radius: 300px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+}
+
+.intro__btn-play:hover {
+    background: rgb(235, 46, 9);
+}
+
+.intro__btn-icon {
+    position: absolute;
+    top: 0;
+    left: 193px;
+
+    width: 65px;
+    height: 65px;
+
+    background-color: #fff;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    cursor: pointer;
+}
+.intro__btn-icon::before {
+    content: '';
+
+    position: absolute;
+
+    top: -7px;
+    left: -8px;
+
+    background: rgba(255, 255, 255, 0.3);
+
+    width: 81px;
+    height: 81px;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.intro__btn-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -58%);
+    -webkit-transform: translate(-55%, -58%);
+    -moz-transform: translate(-55%, -58%);
+    -ms-transform: translate(-55%, -58%);
+    -o-transform: translate(-55%, -58%);
+}
+
+/* slider */
+
+.slider-episodes {
+    padding-bottom: 100px;
+}
+
+.slider-episodes__title {
+    font-weight: bold;
+
+    margin-bottom: 24px;
+}
+
+.slider-episodes__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.slider-episodes__item { 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 250px;
+    min-height: 200px;
+
+    padding: 30px;
+
+    overflow: hidden;
+    background-image: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86)), url(../img/episode-IV.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.slider-episodes__item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.slider-episodes__item--V {
+    background-image: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86)), url(../img/episode-V.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-episodes__item--VI {
+    background-image: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86)), url(../img/episode-VI.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-episodes__item--I {
+    background-image: linear-gradient(0deg, rgba(80, 80, 80, 0.86), rgba(80, 80, 80, 0.86)), url(../img/episode-I.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-episodes__item:hover::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(0deg, rgba(64, 101, 255, 0.5), rgba(64, 101, 255, 0.5));
+}
+
+
+.episodes__item-name {
+   font-weight: 700;
+}
+.episodes__item-name span {
+    display: block;
+}
+.episodes__item-rating {
+    display: flex;
+    align-items: center;
+}
+
+.episodes__item-rating span {
+    font-size: 13px;
+    line-height: 19px;
+
+    margin-right: 12px;
+}
+
+.episodes__item-rating-star {
+    display: flex;
+    align-items: center;
+}
+
+.slider-arrows__left {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.slider-arrows__right {
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .intro__content-movie-title {
+        font-size: 60px;
+    }
+
+    .slider-episodes__item:not(:last-child) {
+        margin-right: 0;
+    }
+}
+@media (max-width: 820px) {
+    .intro__content-text {
+         width: 100%; 
+        color: rgb(255, 255, 255);
+        margin-bottom: 25px;
+    }
+
+    .slider-episodes__item{
+        max-width: 100%;
+    }
+    .slider-episodes__item:not(:last-child) {
+        margin-right: 35px;
+    }
+}
+
+@media (max-width: 610px) {
+    .nav {
+        position: absolute;
+        right: 18px;
+        top: 0;
+        padding: 30px;
+
+        display: none;
+        flex-direction: column;
+
+        text-align: center;
+
+        z-index: 10;
+
+        background-color: #000;
+    }
+    .nav.active {
+        display: flex;
+    }
+    .nav__link {
+        padding: 5px 0;
+
+    }
+    .nav__link:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+    .intro__content-movie-title {
+        font-size: 50px;
+    }
+    .intro__content-episode {
+        font-size: 30px;
+    }
+}
